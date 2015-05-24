@@ -18,7 +18,8 @@ Subject: [MAGOME-MAIL] Mail Server WARNING
 Please check Magome Mail Server.
 EOS
 else
-	echo `date +%s` >> $HEARTBEATFILE
+	DDD=`date +%s`
+	echo `expr $DDD / 60` >> $HEARTBEATFILE
 	tail -100 $HEARTBEATFILE > $HEARTBEATFILE.bak
 	mv -f $HEARTBEATFILE.bak $HEARTBEATFILE
 	sudo /bin/rm $WARNINGFILE

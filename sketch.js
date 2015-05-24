@@ -29,6 +29,9 @@ function draw() {
 		x = 0;
 		index = 0;
 	};
+	while(lines[index] < startmin){
+		index += 1;
+	}
 	if(x == (lines[index] - startmin)){
 		y -=5;
 		if ( y < 30 ){
